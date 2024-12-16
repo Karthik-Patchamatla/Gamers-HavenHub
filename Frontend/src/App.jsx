@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Navbar from './components/Navbar';
 import PCHardwares from './components/PCHardwares';
 import Footer from './components/Footer';
+import BestSellers from './components/BestSellers';
 
 function App() {
 
@@ -11,8 +12,9 @@ function App() {
     <div>
       <Navbar/>
       <Hero/>
-      <Consoles/>
+      <BestSellers/>
       <Brands/>
+      <Consoles/>
       <PCHardwares/>
       <Footer/>
     </div>
