@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 // Middleware
 app.use(express.json());
 
-const allowedOrigins = ['http://localhost:5173', 'https://your-frontend-domain.vercel.app'];
+const allowedOrigins = ['http://localhost:5173', 'https://gamershavenhub.vercel.app'];
 
 app.use(cors({
   origin: function (origin, callback) {
@@ -44,5 +44,5 @@ app.get("/api/games", async (req, res) => {
 });
 
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
