@@ -1,5 +1,3 @@
-// src/pages/LoginPage.js
-
 import React, { useState } from 'react';
 import InputField from '../components/InputField';
 import Button from '../components/Button';

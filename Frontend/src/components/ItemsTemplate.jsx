@@ -13,16 +13,16 @@ function ItemsTemplate({ title, data }) {
                 {data.map((item, index) => (
                     <div 
                         key={index} 
-                        className="flex flex-col items-center rounded-lg bg-[#1e1e1e] px-1 pt-1 min-h-[150px] min-w-[170px] text-left"
+                        className="flex flex-col items-center rounded-lg bg-[#1e1e1e] px-1 pt-1 min-h-[200px] min-w-[170px] text-left"
                     >
                         <img 
                             src={item.src}
                             alt={item.desc} 
-                            className="w-[170px] h-[150px] rounded-lg object-fill mb-4 shadow-lg"
+                            className="w-[170px] h-[200px] rounded-lg object-fill shadow-lg"
                         />
                         <div className="mb-3 w-full px-3">
                             <p className="font-semibold text-[13px] line-clamp-1 mt-2">{item.desc}</p>
-                            <p className="font-semibold text-sm mt-4">{item.prize}</p>
+                            <p className="font-semibold text-sm mt-2">{item.prize}</p>
                         </div>
                     </div>
                 ))}

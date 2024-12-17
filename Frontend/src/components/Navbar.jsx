@@ -1,43 +1,28 @@
-import React, { useState } from 'react';
-import Menu from '../assets/menu.svg';
-import Close from '../assets/xmark.svg';
-import logo from '../assets/logo.png';
-import cart from '../assets/cart.svg';
-import user from '../assets/user.svg';
-import search from '../assets/search.svg';
-import LoginPage from '../pages/LoginPage';
-import RegisterPage from '../pages/RegisterPage';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Menu from "../assets/menu.svg";
+import Close from "../assets/xmark.svg";
+import logo from "../assets/logo.png";
+import cart from "../assets/cart.svg";
+import user from "../assets/user.svg";
+import search from "../assets/search.svg";
+import LoginPage from "../pages/LoginPage";
+import RegisterPage from "../pages/RegisterPage";
 
 function Navbar() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [isLoginModalOpen, setLoginModalOpen] = useState(false);
   const [isRegisterModalOpen, setRegisterModalOpen] = useState(false);
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!isSidebarOpen);
-  };
-
-  const openLoginModal = () => {
-    setLoginModalOpen(true);
-  };
-
-  const closeLoginModal = () => {
-    setLoginModalOpen(false);
-  };
-
-  const openRegisterModal = () => {
-    setRegisterModalOpen(true);
-  };
-
-  const closeRegisterModal = () => {
-    setRegisterModalOpen(false);
-  };
-
+  const toggleSidebar = () => setSidebarOpen(!isSidebarOpen);
+  const openLoginModal = () => setLoginModalOpen(true);
+  const closeLoginModal = () => setLoginModalOpen(false);
+  const openRegisterModal = () => setRegisterModalOpen(true);
+  const closeRegisterModal = () => setRegisterModalOpen(false);
   const switchToRegister = () => {
     closeLoginModal();
     openRegisterModal();
   };
-
   const switchToLogin = () => {
     closeRegisterModal();
     openLoginModal();
@@ -58,10 +43,18 @@ function Navbar() {
           <img src={logo} alt="logo" className="h-10" />
         </div>
         <div className="text-white text-[14.5px] space-x-8 hidden lg:flex">
-          <a href="" className="hover:text-[#aa3466]">Games</a>
-          <a href="" className="hover:text-[#aa3466]">Consoles</a>
-          <a href="" className="hover:text-[#aa3466]">Accessories</a>
-          <a href="" className="hover:text-[#aa3466]">PC Components</a>
+          <Link to="/games" className="hover:text-[#aa3466]">
+            Games
+          </Link>
+          <Link to="/consoles" className="hover:text-[#aa3466]">
+            Consoles
+          </Link>
+          <Link to="/accessories" className="hover:text-[#aa3466]">
+            Accessories
+          </Link>
+          <Link to="/pc-components" className="hover:text-[#aa3466]">
+            PC Components
+          </Link>
         </div>
         <div className="flex gap-4 items-center">
           <img src={search} className="hidden sm:flex w-6 h-6 cursor-pointer" alt="Search Icon" />
@@ -93,16 +86,24 @@ function Navbar() {
           </div>
           <ul className="text-[#b0b0b0] text-lg divide-y divide-gray-700">
             <li className="py-4 hover:text-gray-300 transition">
-              <a href="#" className="text-center w-full">Games</a>
+              <Link to="/games" onClick={toggleSidebar}>
+                Games
+              </Link>
             </li>
             <li className="py-4 hover:text-gray-300 transition">
-              <a href="#" className="text-center w-full">Consoles</a>
+              <Link to="/consoles" onClick={toggleSidebar}>
+                Consoles
+              </Link>
             </li>
             <li className="py-4 hover:text-gray-300 transition">
-              <a href="#" className="text-center w-full">Accessories</a>
+              <Link to="/accessories" onClick={toggleSidebar}>
+                Accessories
+              </Link>
             </li>
             <li className="py-4 hover:text-gray-300 transition">
-              <a href="#" className="text-center w-full">PC Components</a>
+              <Link to="/pc-components" onClick={toggleSidebar}>
+                PC Components
+              </Link>
             </li>
           </ul>
         </div>
