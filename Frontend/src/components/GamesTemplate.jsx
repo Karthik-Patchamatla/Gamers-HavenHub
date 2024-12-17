@@ -14,10 +14,8 @@ function GamesTemplate({ platform }) {
 
         const data = await response.json();
         setGames(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
+      } catch (error) {
+        console.error(error);
       }
     };
 
