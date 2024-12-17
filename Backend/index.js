@@ -6,6 +6,10 @@ const cors = require("cors");
 const Game = require("./models/Game");
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Backend is working!");
+});
+
 // Middleware
 app.use(express.json());
 app.use(cors());
