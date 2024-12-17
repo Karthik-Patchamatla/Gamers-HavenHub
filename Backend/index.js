@@ -9,7 +9,13 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: '*' }));
+app.use(cors(
+    {
+        origin: 'https://gamershavenhub.vercel.app/',
+        methods: 'GET,POST',
+        allowedHeaders: 'Content-Type'
+    }
+));
 
 // MongoDB Connection
 const mongoURI = process.env.MONGO_URI;
