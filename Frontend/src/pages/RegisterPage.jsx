@@ -16,7 +16,7 @@ function RegisterPage({ onClose, switchToLogin }) {
   // Dynamic API URL
   const API_BASE_URL =
     process.env.NODE_ENV === 'production'
-      ? 'gamers-haven-backend.vercel.app/api'
+      ? 'https://gamers-havenhub-backend.vercel.app/api'
       : 'http://localhost:8080/api';
 
   const handleRegister = async (e) => {
