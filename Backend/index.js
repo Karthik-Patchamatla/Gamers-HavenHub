@@ -13,14 +13,17 @@ app.get("/", (req, res) => {
 // Middleware
 app.use(express.json());
 
-// CORS configuration
-const corsOptions = {
-  origin: "https://gamershavenhub.vercel.app",
-  methods: "GET,POST",
-  allowedHeaders: "Content-Type,Authorization",
-};
+const allowedOrigins = ['http://localhost:5173', 'https://your-frontend-domain.vercel.app'];
 
-app.use(cors(corsOptions));
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true); // Allow the request
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 // MongoDB Atlas Connection
 mongoose
