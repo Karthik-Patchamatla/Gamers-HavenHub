@@ -12,7 +12,15 @@ app.get("/", (req, res) => {
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+
+// CORS configuration
+const corsOptions = {
+  origin: "https://gamershavenhub.vercel.app",
+  methods: "GET,POST",
+  allowedHeaders: "Content-Type,Authorization",
+};
+
+app.use(cors(corsOptions));
 
 // MongoDB Atlas Connection
 mongoose

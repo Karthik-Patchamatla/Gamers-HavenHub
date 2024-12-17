@@ -25,7 +25,7 @@ function GamesTemplate({ platform }) {
       {games.map((game) => (
         <div key={game._id} className="bg-[#191919] p-2 rounded-lg">
           <img
-            src={`/assets/${game.image}`}
+            src={`https://backend-smoky-rho-53.vercel.app/assets/${game.image}`}
             alt={game.image}
             className="shadow-lg rounded-lg"
           />
