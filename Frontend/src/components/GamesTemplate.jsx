@@ -7,7 +7,7 @@ function GamesTemplate({ platform }) {
     const fetchGames = async () => {
       try {
         // Fetch games data using the 'platform' as a query parameter
-        const response = await fetch(`http://localhost:8080/api/games?platform=${encodeURIComponent(platform)}`);
+        const response = await fetch(`https://backend-smoky-rho-53.vercel.app/api/games?platform=${encodeURIComponent(platform)}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch data: ${response.statusText}`);
         }
