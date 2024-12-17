@@ -9,13 +9,24 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors(
-    {
-        origin: 'https://gamershavenhub.vercel.app/',
-        methods: 'GET,POST',
-        allowedHeaders: 'Content-Type'
-    }
-));
+
+// CORS Configuration
+const allowedOrigins = ['https://gamershavenhub.vercel.app'];
+
+// Middleware for handling CORS
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error('Not allowed by CORS'));
+      }
+    },
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type'],
+  })
+);
 
 // MongoDB Connection
 const mongoURI = process.env.MONGO_URI;
