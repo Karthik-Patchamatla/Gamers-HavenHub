@@ -7,15 +7,10 @@ function GamesTemplate({ platform }) {
     const fetchGames = async () => {
       try {
         // Fetch games data using the 'platform' as a query parameter
-        const apiUrl = "https://gamers-havenhub-backend.vercel.app/api/games";
-        const response = await fetch(
-          `${apiUrl}?platform=${encodeURIComponent(platform)}`
-        );
-
+        const response = await fetch(`http://localhost:8080/api/games?platform=${encodeURIComponent(platform)}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch data: ${response.statusText}`);
         }
-
         const data = await response.json();
         setGames(data);
       } catch (error) {
