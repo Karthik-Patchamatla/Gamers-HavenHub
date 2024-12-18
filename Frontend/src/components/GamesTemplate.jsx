@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import { BASE_URL } from "../config"; 
+import { BASE_URL } from "../config"; // Correctly imported BASE_URL
 
 function GamesTemplate({ platform }) {
   const [games, setGames] = useState([]);
@@ -8,16 +7,14 @@ function GamesTemplate({ platform }) {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get(`${BASE_URL}/api/games`, {
-          params: { platform: platform },
-          withCredentials: true,
-        });
-        console.log(platform);
-
-        console.log("Fetched data:", response.data);
-        setGames(response.data);
+        const response = await fetch(`${BASE_URL}/api/games?platform=${encodeURIComponent(platform)}`);
+        if (!response.ok) {
+          throw new Error(`Failed to fetch data: ${response.statusText}`);
+        }
+        const data = await response.json();
+        setGames(data);
       } catch (error) {
-        console.error("Axios error:", error);
+        console.error("Fetch error:", error);
       }
     };
 

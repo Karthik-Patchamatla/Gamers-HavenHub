@@ -1,1 +1,1 @@
-export const BASE_URL = "https://backend-ten-xi-69.vercel.app";
+export const BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8080";
