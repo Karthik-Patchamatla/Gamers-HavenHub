@@ -2,7 +2,6 @@ const express = require("express");
 const dotenv = require("dotenv");
 dotenv.config();
 const mongoose = require("mongoose");
-const cors = require("cors");
 const Game = require("./models/Game");
 
 // Initialize Express
@@ -11,15 +10,16 @@ const app = express();
 // Middleware
 app.use(express.json());
 
+const cors = require("cors");
+
 app.use(
   cors({
-    origin: "https://gamershavenhub.vercel.app/",
-    method: 'GET,POST,PUT,DELETE',    
-    withCredentials: true,    
-    crossorigin: true,    
-    mode: 'no-cors',  
+    origin: "https://gamershavenhub.vercel.app", // Allowed frontend domain (without trailing slash)
+    methods: "GET, POST, PUT, DELETE", // Allowed HTTP methods (correct plural form)
+    credentials: true, // Allows cookies/authentication headers
   })
 );
+
 
 
 
