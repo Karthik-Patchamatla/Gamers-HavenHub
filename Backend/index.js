@@ -1,50 +1,29 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
-
 const Game = require("./models/Game");
 const app = express();
-
-app.get("/", (req, res) => {
-  res.send("Backend is working!");
-});
-
 // Middleware
 app.use(express.json());
-
-const allowedOrigins = ['http://localhost:5173', 'https://gamershavenhub.vercel.app'];
-
-app.use(cors({
-  origin: function (origin, callback) {
-    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
-      callback(null, true); // Allow the request
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
-
-// MongoDB Atlas Connection
+app.use(cors());
+// Connect to MongoDB
 mongoose
-  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log("Connected to MongoDB Atlas"))
-  .catch((err) => console.error("Database connection error:", err));
+  .connect("mongodb://127.0.0.1:27017/GamersHavenHub")
+  .then(() => console.log("Connected to MongoDB"))
+  .catch((err) => console.log(err));
 
-// API Endpoint
+app.listen(8080, () => {
+  console.log("Server running on port 8080");
+});
+
+// API Route
 app.get("/api/games", async (req, res) => {
   const { platform } = req.query;
   try {
     const games = await Game.find({ id1: platform });
     res.json(games);
   } catch (error) {
-    console.error("Error fetching data:", error);
-    res.status(500).send("Internal Server Error");
+    console.error(error);
+    res.status(500).send("Error fetching data");
   }
 });
-
-
-const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
