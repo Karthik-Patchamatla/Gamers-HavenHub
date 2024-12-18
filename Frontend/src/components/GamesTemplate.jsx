@@ -6,26 +6,29 @@ function GamesTemplate({ platform }) {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        // Fetch games data using the 'platform' as a query parameter
-        const response = await fetch(`https://backend-smoky-rho-53.vercel.app/api/games?platform=${encodeURIComponent(platform)}`);
+        const response = await fetch(`http://localhost:8080/api/games?platform=${encodeURIComponent(platform)}`);
+  
         if (!response.ok) {
           throw new Error(`Failed to fetch data: ${response.statusText}`);
         }
+  
         const data = await response.json();
+        console.log("Fetched data:", data);
         setGames(data);
       } catch (error) {
-        console.error(error);
+        console.error("Fetch error:", error);
       }
     };
-
+  
     fetchGames();
   }, [platform]);
+  
   return (
     <div className="grid bg-[#121212] gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
       {games.map((game) => (
         <div key={game._id} className="bg-[#191919] p-2 rounded-lg">
           <img
-            src={`https://backend-smoky-rho-53.vercel.app/assets/${game.image}`}
+            src={`/assets/${game.image}`}
             alt={game.image}
             className="shadow-lg rounded-lg"
           />
