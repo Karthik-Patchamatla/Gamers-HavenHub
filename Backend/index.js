@@ -10,7 +10,18 @@ const app = express();
 
 // Middleware
 app.use(express.json());
-app.use(cors());
+
+app.use(
+  cors({
+    origin: "https://gamershavenhub.vercel.app/",
+    method: 'GET,POST,PUT,DELETE',    
+    withCredentials: true,    
+    crossorigin: true,    
+    mode: 'no-cors',  
+  })
+);
+
+
 
 // Start server
 app.listen(process.env.PORT, () => {
