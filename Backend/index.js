@@ -5,6 +5,7 @@ const mongoose = require("mongoose");
 const Game = require("./models/Game");
 const Console = require("./models/Console");
 const Accessories = require("./models/Accessories");
+const Component = require("./models/PCComponents");
 
 // Initialize Express
 const app = express();
@@ -59,7 +60,19 @@ app.get("/api/consoles", async (req, res) => {
 app.get("/api/accessories", async (req, res) => {
   const { platform } = req.query;
   try {
-    const games = await Console.find({ id1: platform });
+    const games = await Accessories.find({ id1: platform });
+    res.json(games);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error fetching data");
+  }
+});
+
+// API Route for PCComponents
+app.get("/api/components", async (req, res) => {
+  const { platform } = req.query;
+  try {
+    const games = await Component.find({ id1: platform });
     res.json(games);
   } catch (error) {
     console.error(error);

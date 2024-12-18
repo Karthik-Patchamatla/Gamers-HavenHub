@@ -33,7 +33,8 @@ function GamesTemplate({ platform }) {
           <h3 className="font-semibold text-[13px] line-clamp-1 mt-2">
             {game.name}
           </h3>
-          <p className="font-semibold text-sm mt-2">{game.price}</p>
+          <span className="font-semibold my-2">{game.price}</span>
+          <span className="font-semibold line-through text-sm text-[#888888] ml-3 my-2">{game.oldprice}</span>
         </div>
       ))}
     </div>

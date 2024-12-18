@@ -1,0 +1,217 @@
+[
+    {
+        "id": "MSI GTX 1080 Ti 11GB Armor",
+        "id1": "PCComponents",
+        "name": "MSI GTX 1080 Ti 11GB Armor",
+        "price": "17399",
+        "oldprice": "21599",
+        "discount": "19%",
+        "image": "GH-151.png",
+        "description": "The GeForce GTX 1080 Ti was an enthusiast-class graphics card by NVIDIA. Built on the 16 nm process, and based on the GP102 graphics processor, in its GP102-350-K1-A1 variant, the card supports DirectX 12. This ensures that all modern games will run on GeForce GTX 1080 Ti. The GP102 graphics processor is a large chip with a die area of 471 mm² and 11,800 million transistors. Unlike the fully unlocked TITAN Xp, which uses the same GPU but has all 3840 shaders enabled, NVIDIA has disabled some shading units on the GeForce GTX 1080 Ti to reach the product's target shader count. It features 3584 shading units, 224 texture mapping units, and 88 ROPs. NVIDIA has paired 11 GB GDDR5X memory with the GeForce GTX 1080 Ti, which are connected using a 352-bit memory interface.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "Ryzen 5 5600G",
+        "id1": "PCComponents",
+        "name": "Ryzen 5 5600G",
+        "price": "8799",
+        "oldprice": "10699",
+        "discount": "17%",
+        "image": "GH-156.png",
+        "description": "AMD Ryzen 5 5600G is a desktop processor with 6 cores and 12 threads. Based on the Zen 3 architecture, this AMD processor has a base frequency of 3.9 GHz and can reach a boost frequency of 4.6 GHz. It has 32 MB of L3 cache and a TDP of 65W. The AMD Ryzen 5 5600G is compatible with AMD AM4 socket motherboards. It also supports PCIe 4.0 and DDR4 memory.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "ASUS - PB287Q - 28 inch UHD 60Hz",
+        "id1": "PCComponents",
+        "name": "ASUS - PB287Q - 28 inch UHD 60Hz",
+        "price": "22499",
+        "oldprice": "27199",
+        "discount": "17%",
+        "image": "GH-160.png",
+        "description": "ASUS PB287Q is a 28-inch Ultra HD (3840 x 2160) monitor with a 60Hz refresh rate. It features a 1 ms response time, a 100% sRGB color gamut, and a 300 nits brightness. The monitor also has a built-in speakers with a 2W output. It is compatible with AMD FreeSync technology and has a VESA mount.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "ZOTAC RTX 3080 10GB Trinity",
+        "id1": "PCComponents",
+        "name": "ZOTAC RTX 3080 10GB Trinity",
+        "price": "38599",
+        "oldprice": "50199",
+        "discount": "23%",
+        "image": "GH-152.png",
+        "description": "Get Amplified with the ZOTAC GAMING GeForce RTX™ 30 Series based on the NVIDIA Ampere architecture. Built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and superfast GDDR6X memory, the ZOTAC GAMING GeForce RTX 3080 Trinity gives rise to amplified gaming with ultra graphics fidelity.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "ASUS RTX 2070 8GB Dual",
+        "idi": "PCComponents",
+        "name": "ASUS RTX 2070 8GB Dual",
+        "price": "18399",
+        "oldprice": "22399",
+        "discount": "17%",
+        "image": "GH-153.png",
+        "description": "ASUS Dual GeForce RTX™ 2070 8GB GDDR6 with powerful cooling for higher refresh rates and VR gaming NVIDIA TURING™ ASUS GeForceRTX™ graphics cards are powered by the Turing™ GPU architecture and the all-new RTX platform. This gives you up to 6X the performance of previous-generation graphics cards and brings the power of real-time ray tracing and AI to games.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "ASUS GTX 1660 Ti 6GB Gaming Edition OC",
+        "id1": "PCComponents",
+        "name": "ASUS GTX 1660 Ti 6GB Gaming Edition OC",
+        "price": "11799",
+        "oldprice": "14699",
+        "discount": "19%",
+        "image": "GH-154.png",
+        "description": "The GeForce GTX 1660 Ti is a performance-segment graphics card by NVIDIA. Built on the 12 nm process, and based on the TU116 graphics processor, in its TU116-400-A1 variant, the card supports DirectX 12. This ensures that all modern games will run on GeForce GTX 1660 Ti. The TU116 graphics processor is an average sized chip with a die area of 284 mm² and 6,600 million transistors. It features 1536 shading units, 96 texture mapping units, and 48 ROPs. NVIDIA has paired 6 GB GDDR6 memory with the GeForce GTX 1660 Ti, which are connected using a 192-bit memory interface.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "COLORFUL RTX 3070 Ti 8GB NB",
+        "id1": "PCComponents",
+        "name": "COLORFUL RTX 3070 Ti 8GB NB",
+        "price": "27099",
+        "oldprice": "31999",
+        "discount": "15%",
+        "image": "GH-155.png",
+        "description": "COLORFUL GeForce RTX™ 30 Series based on the NVIDIA Ampere architecture. Built with enhanced RT Cores and Tensor Cores, new streaming multiprocessors, and superfast GDDR6X memory, the COLORFUL GeForce RTX 3070 Ti NB gives rise to amplified gaming with ultra graphics fidelity.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "SAMSUNG 80 - LS27A800UJWXXL - 27 inch UHD 60Hz",
+        "id1":"PCComponents",
+        "name": "SAMSUNG 80 - LS27A800UJWXXL - 27 inch UHD 60Hz",
+        "price": "23999",
+        "oldprice": "32399",
+        "discount": "26%",
+        "image": "GH-161.png",
+        "description": "The Samsung LS27A800UJWXXL is a 27-inch Ultra HD (4K) monitor that offers a wide range of features and specifications to enhance your visual experience. With a resolution of 3840 x 2160, this monitor provides a sharp and detailed image, making it ideal for tasks that require high visual fidelity, such as graphic design, video editing, and gaming. The monitor supports a refresh rate of 60 Hz, which is suitable for most general computing tasks and can handle basic gaming without any significant issues. The 4 ms response time is good for gaming and general visual tasks, though it may not be as fast as some high-end models.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "Ryzen 5 PRO 4650G",
+        "id1": "PCComponents",
+        "name": "Ryzen 5 PRO 4650G",
+        "price": "8599",
+        "oldprice": "11499",
+        "discount": "25%",
+        "image": "GH-157.png",
+        "description": "Through a multi-layered approach to security features, AMD Ryzen PRO Processors help businesses protect data, avoid downtime, and reduce resource drain: World’s first x86 processors integrating the Microsoft Pluton Security Processor – a chip to cloud security technology that hardens new Windows 11 OS-based PCs with continuous protection for user identity, data, and apps1 Microsoft Secured-core PC helps enable a secure boot, can protect a device from firmware vulnerabilities, helps shield the operating system from attacks, and helps prevent unauthorized access to devices and data with advanced access controls and authentication systems AMD Shadow Stack offers hardware enabled protection against control-flow attacks AMD Secure Processor integrated on-chip to help protect sensitive data Exclusive to AMD Processors with PRO technologies, AMD Memory Guard provides real time encryption of system memory to help protect against physical attacks should your laptop be lost or stolen Industry partnerships support multi-layered approach AMD PRO Manageability For simplified deployment and management that is compatible with your current infrastructure, every AMD Ryzen PRO processor includes a comprehensive set of open standards based, CPU agnostic management features, including support for Asset Inventory, KVM, Remote Management Firmware Updates, and Microsoft Endpoint Manager. The AMD Ryzen PRO 6000 Series processors include two new features: Wireless support for 32+ widely used DASH profiles AMD Manageability Processor -- a dedicated processor integrated into the CPU for enhanced wireless manageability AMD PRO Business Ready AMD Ryzen PRO processors are designed for quality, reliability, and longevity to deliver the long-term consistency IT managers need to simplify IT planning and make smart investments for future-ready computing.",
+        "warranty":"Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "Intel Core i9-13900K Processor",
+        "id1": "PCComponents",
+        "name": "Intel Core i9-13900K Processor",
+        "price": "32299",
+        "oldprice": "43599",
+        "discount": "26%",
+        "image": "GH-158.png",
+        "description": "The Intel Core i9-13900K is a high-performance processor designed for desktop computing, offering exceptional performance and capabilities for advanced tasks such as gaming, video editing, and scientific computing.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "ASUS TUF - VG259QR - 24.5 inch FHD 165Hz",
+        "id1": "PCComponents",
+        "name": "ASUS TUF - VG259QR - 24.5 inch FHD 165Hz",
+        "price": "13499",
+        "oldprice": "16499",
+        "discount": "18%",
+        "image": "GH-159.png",
+        "description": "The ASUS TUF VG259QR is a 24.5-inch gaming monitor with a Full HD resolution and a 165Hz refresh rate, providing fast and smooth gameplay and smooth visual transitions.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "GIGABYTE AORUS - FI25F - 24.5 inch FHD 240Hz",
+        "id1": "PCComponents",
+        "name": "GIGABYTE AORUS - FI25F - 24.5 inch FHD 240Hz",
+        "price": "16499",
+        "oldprice": "20099",
+        "discount": "18%",
+        "image": "GH-162.png",
+        "description": "The GIGABYTE AORUS FI25F is a 24.5-inch gaming monitor with a Full HD resolution and a 240Hz refresh rate, providing fast and smooth gameplay and smooth visual transitions.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "LG Ultragear - 27GP750-B 240Hz",
+        "id1": "PCComponents",
+        "name": "LG Ultragear - 27GP750-B 240Hz",
+        "price": "16500",
+        "oldprice": "17500",
+        "discount": "6%",
+        "image": "GH-163.png",
+        "description": "The LG Ultragear 27GP750-B is a 27-inch gaming monitor with a Full HD resolution and a 240Hz refresh rate, providing fast and smooth gameplay and smooth visual transitions.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "ADATA XPG Gammix D30 1x8GB DDR4 3200MHz - AX4U320088G16A-SR30/AX4U320038G16A-SR30",
+        "id1": "PCComponents",
+        "name": "ADATA XPG Gammix D30 1x8GB DDR4 3200MHz - AX4U320088G16A-SR30/AX4U320038G16A-SR30",
+        "price": "1399",
+        "oldprice": "1699",
+        "discount": "18%",
+        "image": "GH-164.png",
+        "description": "The ADATA XPG Gammix D30 is a high-performance DDR4 memory module designed for desktop and laptop computers, offering exceptional speed and reliability.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "CORSAIR Vengeance RGB PRO 1x8GB DDR4 3000MHz - CMW8GX4M1D3000C16",
+        "id1": "PCComponents",
+        "name": "CORSAIR Vengeance RGB PRO 1x8GB DDR4 3000MHz - CMW8GX4M1D3000C16",
+        "price": "2699",
+        "oldprice": "3599",
+        "discount": "25%",
+        "image": "GH-165.png",
+        "description": "The CORSAIR Vengeance RGB PRO is a high-performance DDR4 memory module designed for desktop and laptop computers, offering exceptional speed and reliability.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "WESTERN DIGITAL Blue SN570 500GB M.2 NVMe - WDS500G3B0C",
+        "id1": "PCComponents",
+        "name": "WESTERN DIGITAL Blue SN570 500GB M.2 NVMe - WDS500G3B0C",
+        "price": "1699",
+        "oldprice": "2099",
+        "discount": "18%",
+        "image": "GH-166.png",
+        "description": "The WESTERN DIGITAL Blue SN570 is a high-performance M.2 NVMe SSD designed for desktop and laptop computers, offering exceptional speed and reliability.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "AORUS WATERFORCE II 360 ICE",
+        "id1": "PCComponents",
+        "name": "AORUS WATERFORCE II 360 ICE",
+        "price": "12500",
+        "oldprice": "15000",
+        "discount": "17%",
+        "image": "GH-167.png",
+        "description": "The AORUS WATERFORCE II 360 ICE is a high-performance liquid cooling system designed for desktop and laptop computers, offering exceptional cooling performance and quiet operation.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    },
+
+    {
+        "id": "NZXT T120 RGB CPU Air Cooler - Black (RC-TR120-B1)",
+        "id1": "PCComponents",
+        "name": "NZXT T120 RGB CPU Air Cooler - Black (RC-TR120-B1)",
+        "price": "899",
+        "oldprice": "1099",
+        "discount": "18%",
+        "image": "GH-168.png",
+        "description": "The NZXT T120 RGB CPU Air Cooler is a high-performance CPU air cooler designed for desktop and laptop computers, offering exceptional cooling performance and RGB lighting effects.",
+        "warranty": "Product is thoroughly tested and completely functional without any issues. We also provide a one month warranty from our end."
+    }
+]
