@@ -14,9 +14,9 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "https://gamershavenhub.vercel.app", // Allowed frontend domain (without trailing slash)
-    methods: "GET, POST, PUT, DELETE", // Allowed HTTP methods (correct plural form)
-    credentials: true, // Allows cookies/authentication headers
+    origin: "https://gamershavenhub.vercel.app",
+    methods: "GET, POST, PUT, DELETE",
+    credentials: true,
   })
 );
 
