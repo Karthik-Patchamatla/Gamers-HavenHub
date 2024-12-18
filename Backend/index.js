@@ -1,20 +1,31 @@
 const express = require("express");
+const dotenv = require("dotenv");
+dotenv.config();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const Game = require("./models/Game");
+
+// Initialize Express
 const app = express();
+
 // Middleware
 app.use(express.json());
 app.use(cors());
+
+// Start server
+app.listen(process.env.PORT, () => {
+  console.log(`Server running on port ${process.env.PORT}`);
+});
+
+app.get("/", (req, res) => {
+  res.send("Backend is working");
+});
+
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://127.0.0.1:27017/GamersHavenHub")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
-
-app.listen(8080, () => {
-  console.log("Server running on port 8080");
-});
 
 // API Route
 app.get("/api/games", async (req, res) => {

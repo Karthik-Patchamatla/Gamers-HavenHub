@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BASE_URL } from "../config";
 
 function GamesTemplate({ platform }) {
   const [games, setGames] = useState([]);
@@ -6,12 +7,12 @@ function GamesTemplate({ platform }) {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await fetch(`http://localhost:8080/api/games?platform=${encodeURIComponent(platform)}`);
-  
+        const response = await fetch(`${BASE_URL}/api/games?platform=${encodeURIComponent(platform)}`);
+
         if (!response.ok) {
           throw new Error(`Failed to fetch data: ${response.statusText}`);
         }
-  
+
         const data = await response.json();
         console.log("Fetched data:", data);
         setGames(data);
@@ -19,10 +20,10 @@ function GamesTemplate({ platform }) {
         console.error("Fetch error:", error);
       }
     };
-  
+
     fetchGames();
   }, [platform]);
-  
+
   return (
     <div className="grid bg-[#121212] gap-6 grid-cols-2 md:grid-cols-4 lg:grid-cols-6">
       {games.map((game) => (
