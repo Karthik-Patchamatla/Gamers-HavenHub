@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../config";
 
-function GamesTemplate({ platform }) {
+function ConsolesTemplate({ platform }) {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await fetch(`${BASE_URL}/api/games?platform=${encodeURIComponent(platform)}`);
+        const response = await fetch(`${BASE_URL}/api/consoles?platform=${encodeURIComponent(platform)}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch data: ${response.statusText}`);
         }
@@ -28,16 +28,16 @@ function GamesTemplate({ platform }) {
           <img
             src={`/assets/${game.image}`}
             alt={game.image}
-            className="shadow-lg rounded-lg"
+            className="shadow-lg rounded-lg align-center w-full h-[200px] object-contain"
           />
           <h3 className="font-semibold text-[13px] line-clamp-1 mt-2">
             {game.name}
           </h3>
-          <p className="font-semibold text-sm mt-2">{game.price}</p>
+          <p className="font-semibold text-sm my-2">{game.price}</p>
         </div>
       ))}
     </div>
   );
 }
 
-export default GamesTemplate;
+export default ConsolesTemplate;

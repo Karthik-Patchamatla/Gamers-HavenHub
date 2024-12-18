@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 const mongoose = require("mongoose");
 const Game = require("./models/Game");
+const Console = require("./models/Console");
 
 // Initialize Express
 const app = express();
@@ -34,6 +35,19 @@ app.get("/api/games", async (req, res) => {
   const { platform } = req.query;
   try {
     const games = await Game.find({ id1: platform });
+    res.json(games);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error fetching data");
+  }
+});
+
+// API Route
+app.get("/api/consoles", async (req, res) => {
+  const { platform } = req.query;
+  console.log(platform);
+  try {
+    const games = await Console.find({ id1: platform });
     res.json(games);
   } catch (error) {
     console.error(error);
