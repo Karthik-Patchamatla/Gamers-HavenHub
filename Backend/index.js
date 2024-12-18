@@ -4,6 +4,7 @@ dotenv.config();
 const mongoose = require("mongoose");
 const Game = require("./models/Game");
 const Console = require("./models/Console");
+const Accessories = require("./models/Accessories");
 
 // Initialize Express
 const app = express();
@@ -30,7 +31,7 @@ mongoose
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.log(err));
 
-// API Route
+// API Route for Games
 app.get("/api/games", async (req, res) => {
   const { platform } = req.query;
   try {
@@ -42,10 +43,21 @@ app.get("/api/games", async (req, res) => {
   }
 });
 
-// API Route
+// API Route for Consoles
 app.get("/api/consoles", async (req, res) => {
   const { platform } = req.query;
-  console.log(platform);
+  try {
+    const games = await Console.find({ id1: platform });
+    res.json(games);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send("Error fetching data");
+  }
+});
+
+// API Route for Accessories
+app.get("/api/accessories", async (req, res) => {
+  const { platform } = req.query;
   try {
     const games = await Console.find({ id1: platform });
     res.json(games);
