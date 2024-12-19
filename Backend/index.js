@@ -57,9 +57,8 @@ app.get("/api/games", async (req, res) => {
 
 // API Route for Consoles
 app.get("/api/consoles", async (req, res) => {
-  const { platform } = req.query;
   try {
-    const games = await Console.find({ id1: platform });
+    const games = await Console.find();
     res.json(games);
   } catch (error) {
     console.error(error);
@@ -69,9 +68,8 @@ app.get("/api/consoles", async (req, res) => {
 
 // API Route for Accessories
 app.get("/api/accessories", async (req, res) => {
-  const { platform } = req.query;
   try {
-    const games = await Accessories.find({ id1: platform });
+    const games = await Accessories.find();
     res.json(games);
   } catch (error) {
     console.error(error);
@@ -81,9 +79,8 @@ app.get("/api/accessories", async (req, res) => {
 
 // API Route for PCComponents
 app.get("/api/components", async (req, res) => {
-  const { platform } = req.query;
   try {
-    const games = await Component.find({ id1: platform });
+    const games = await Component.find();
     res.json(games);
   } catch (error) {
     console.error(error);
