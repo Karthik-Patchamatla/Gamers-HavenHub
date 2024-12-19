@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../config";
 import { Lottie } from "lottie-react";
-import loadingAnimation from "../assets/loading.json";
+import loadingAnimation from "../assets/loader.json";
 
 function AccessoriesTemplate({ platform }) {
   const [games, setGames] = useState([]);
