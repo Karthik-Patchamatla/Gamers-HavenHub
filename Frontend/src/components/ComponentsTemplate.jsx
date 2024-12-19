@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../config";
-import { Lottie } from "lottie-react";
+import Lottie from "lottie-react";
 import loadingAnimation from "../assets/loader.json";
 
 function ComponentsTemplate({ platform }) {
