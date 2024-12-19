@@ -15,6 +15,6 @@ const accessoriesSchema = new mongoose.Schema({
     description4: "String"
 });
 
-const Accessories = mongoose.model('Accessories', accessoriesSchema, 'gamerhubs');
+const Accessories = mongoose.model('Accessories', accessoriesSchema, 'accessories');
 
 module.exports = Accessories;

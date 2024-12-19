@@ -42,13 +42,18 @@ mongoose
 app.get("/api/games", async (req, res) => {
   const { platform } = req.query;
   try {
-    const games = await Game.find({ id1: platform });
+    // Make sure the database query matches the platform field correctly
+    const games = await Game.find({ platform: platform });
+    if (games.length === 0) {
+      return res.status(404).send("No games found for this platform");
+    }
     res.json(games);
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching games:", error);
     res.status(500).send("Error fetching data");
   }
 });
+
 
 // API Route for Consoles
 app.get("/api/consoles", async (req, res) => {

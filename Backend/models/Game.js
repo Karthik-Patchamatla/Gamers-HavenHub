@@ -23,6 +23,6 @@ const gameSchema = new mongoose.Schema({
     Developer: "String",
 });
 
-const Game = mongoose.model('Game', gameSchema, 'gamerhubs');
+const Game = mongoose.model('Game', gameSchema, 'games');
 
 module.exports = Game;

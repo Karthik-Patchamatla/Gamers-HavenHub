@@ -12,6 +12,6 @@ const componentsSchema = new mongoose.Schema({
     warranty: "String",
 });
 
-const PCComponents = mongoose.model('PCComponents', componentsSchema, 'gamerhubs');
+const PCComponents = mongoose.model('PCComponents', componentsSchema, 'components');
 
 module.exports = PCComponents;

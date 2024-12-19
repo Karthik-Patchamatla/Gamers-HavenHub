@@ -20,6 +20,6 @@ const consoleSchema = new mongoose.Schema({
     included6: "String"
 });
 
-const Console = mongoose.model('Console', consoleSchema, 'gamerhubs');
+const Console = mongoose.model('Console', consoleSchema, 'consoles');
 
 module.exports = Console;
