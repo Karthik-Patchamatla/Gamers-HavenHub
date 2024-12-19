@@ -43,7 +43,6 @@ mongoose
 app.get("/api/games", async (req, res) => {
   const { platform } = req.query;
   try {
-    // Make sure the database query matches the platform field correctly
     const games = await Game.find({ platform: platform });
     if (games.length === 0) {
       return res.status(404).send("No games found for this platform");
@@ -123,5 +122,18 @@ app.post('/api/login', async (req, res) => {
       res.status(200).json({ message: "Login successful", username: user.username });
   } catch (error) {
       res.status(500).json({ error: "An error occurred during login" });
+  }
+});
+
+app.get('/api/pccontent/:id', async (req, res) => {
+  try {
+      const { id } = req.params;
+      const game = await Component.findById(id);
+      if (!game) {
+          return res.status(404).json({ error: "Game not found" });
+      }
+      res.status(200).json(game);
+  } catch (error) {
+      res.status(500).json({ error: "An error occurred while fetching the game details" });
   }
 });
