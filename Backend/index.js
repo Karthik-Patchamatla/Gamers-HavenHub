@@ -6,6 +6,7 @@ const Game = require("./models/Game");
 const Console = require("./models/Console");
 const Accessories = require("./models/Accessories");
 const Component = require("./models/PCComponents");
+const User = require("./models/User");
 
 // Initialize Express
 const app = express();
@@ -85,5 +86,42 @@ app.get("/api/components", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).send("Error fetching data");
+  }
+});
+
+app.post('/api/register', async (req, res) => {
+  try {
+      const { firstName, lastName, mobilenumber, email, password } = req.body;
+
+      const newUser = new User({
+          firstname: firstName,
+          lastname: lastName,
+          mobilenumber,
+          email,
+          password,
+      });
+
+      await newUser.save();
+      res.status(201).json({ message: "User registered successfully" });
+  } catch (error) {
+      console.error("Error during registration:", error);
+      res.status(500).json({ error: "An error occurred while registering" });
+  }
+});
+
+// API route to handle login
+app.post('/api/login', async (req, res) => {
+  try {
+      const { email, password } = req.body;
+      
+      const user = await User.findOne({ email: email });
+
+      if (!user || user.password !== password) {
+          return res.status(400).json({ error: "Invalid email or password" });
+      }
+
+      res.status(200).json({ message: "Login successful", username: user.username });
+  } catch (error) {
+      res.status(500).json({ error: "An error occurred during login" });
   }
 });
