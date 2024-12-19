@@ -1,1 +1,1 @@
-export const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://your-backend-url.vercel.app' : 'http://localhost:8080';
+export const BASE_URL = process.env.NODE_ENV === 'production' ? 'https://gamershavenhub-backend.vercel.app' : 'http://localhost:8080';
