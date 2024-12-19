@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../config";
 import { Lottie } from "lottie-react";
-import loadingAnimation from "../assets/loading.json"; // Path to your Lottie JSON file
+import loadingAnimation from "../assets/loading.json";
 
 function AccessoriesTemplate({ platform }) {
   const [games, setGames] = useState([]);
-  const [loading, setLoading] = useState(true); // Track the loading state
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        setLoading(true); // Set loading to true before fetching
+        setLoading(true);
         const response = await fetch(`${BASE_URL}/api/accessories?platform=${encodeURIComponent(platform)}`);
         if (!response.ok) {
           throw new Error(`Failed to fetch data: ${response.statusText}`);
@@ -20,7 +20,7 @@ function AccessoriesTemplate({ platform }) {
       } catch (error) {
         console.error("Fetch error:", error);
       } finally {
-        setLoading(false); // Set loading to false once data is fetched
+        setLoading(false);
       }
     };
 
