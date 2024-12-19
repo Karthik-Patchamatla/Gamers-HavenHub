@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BASE_URL } from "../config";
 import Lottie from "lottie-react";
 import loadingAnimation from "../assets/loader.json";
+import Footer from "./Footer";
 
 function AccessoriesTemplate({ platform }) {
   const [games, setGames] = useState([]);
@@ -32,7 +33,7 @@ function AccessoriesTemplate({ platform }) {
       {/* Show the Lottie loader for the entire page */}
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-[#121212] z-50">
-          <Lottie animationData={loadingAnimation} loop={true} />
+          <Lottie className="w-10 h-10" animationData={loadingAnimation} loop={true} />
         </div>
       )}
 

@@ -32,7 +32,7 @@ function GamesTemplate({ platform }) {
       {/* Show the Lottie loader for the entire page */}
       {loading && (
         <div className="absolute inset-0 flex items-center justify-center bg-[#121212] z-50">
-          <Lottie animationData={loadingAnimation} loop={true} />
+          <Lottie className="w-10 h-10" animationData={loadingAnimation} loop={true} />
         </div>
       )}
 

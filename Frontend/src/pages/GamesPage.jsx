@@ -3,7 +3,7 @@ import underlineImage from '../assets/underline.png';
 import GamesTemplate from '../components/GamesTemplate';
 
 function GamesPage() {
-  const [activeButton, setActiveButton] = useState('PS5'); // Set default active button to 'PS5'
+  const [activeButton, setActiveButton] = useState('PS5');
 
   const platforms = [
     { label: 'PlayStation5', id: 'PS5' },
