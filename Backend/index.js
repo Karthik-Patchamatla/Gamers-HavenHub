@@ -16,7 +16,7 @@ app.use(express.json());
 const cors = require("cors");
 
 const corsOptions = { 
-  origin: ['https://gamershavenhub.vercel.app/', 'http://localhost:5173'], 
+  origin: ['https://gamershavenhub.vercel.app', 'http://localhost:5173'], 
   methods: ['GET', 'POST', 'PUT', 'DELETE'], 
   allowedHeaders: ['Content-Type', 'Authorization'], 
 };
