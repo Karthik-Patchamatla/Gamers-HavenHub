@@ -5,14 +5,14 @@ import Loader from "../components/Loader";
 import ProductImage from "../components/ProductImage";
 import ProductInfo from "../components/ProductInfo";
 import FeaturesCard from "../components/FeaturesCard";
-import DescriptionSection from "../components/DescriptionSection";
 import SimilarProducts from "../components/SimilarProducts";
 import delivery from "../assets/delivery.svg";
 import tradeIn from "../assets/trade.svg";
 import returnPolicy from "../assets/return.svg";
 import support from "../assets/support.svg";
+import AccessoriesDescriptionSection from "../components/AccessoriesDescriptionSection";
 
-const ComponentsContentPage = () => {
+const AccessoriesContentPage = () => {
   const { id } = useParams();
   const [game, setGame] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -21,7 +21,7 @@ const ComponentsContentPage = () => {
     const fetchGameDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${BASE_URL}/api/pccontent/${id}`);
+        const response = await fetch(`${BASE_URL}/api/accessoriescontent/${id}`);
         if (!response.ok) throw new Error("Failed to fetch game details");
         const data = await response.json();
         setGame(data);
@@ -35,7 +35,8 @@ const ComponentsContentPage = () => {
   }, [id]);
 
   if (loading) return <Loader />;
-  if (!game) return <div className="text-white text-center">Game not found</div>;
+  if (!game)
+    return <div className="text-white text-center">Game not found</div>;
 
   return (
     <div className="px-5 md:px-12 lg:px-52 bg-[#121212] text-white">
@@ -77,8 +78,15 @@ const ComponentsContentPage = () => {
           </div>
 
           {/* Description Sections */}
-          <DescriptionSection title="Description" content={game.description} />
-          <DescriptionSection title="Warranty" content={game.warranty} />
+          <AccessoriesDescriptionSection
+            title="Description"
+            description1={game.description1}
+            description2={game.description2}
+            description3={game.description3}
+            description4={game.description4}
+            title1="Warranty"
+            warranty={game.warranty}
+          />
         </div>
       </div>
 
@@ -88,4 +96,4 @@ const ComponentsContentPage = () => {
   );
 };
 
-export default ComponentsContentPage;
+export default AccessoriesContentPage;

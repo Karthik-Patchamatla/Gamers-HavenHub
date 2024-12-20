@@ -5,14 +5,14 @@ import Loader from "../components/Loader";
 import ProductImage from "../components/ProductImage";
 import ProductInfo from "../components/ProductInfo";
 import FeaturesCard from "../components/FeaturesCard";
-import DescriptionSection from "../components/DescriptionSection";
+import GameDescriptionSection from "../components/GameDescriptionSection";
 import SimilarProducts from "../components/SimilarProducts";
 import delivery from "../assets/delivery.svg";
 import tradeIn from "../assets/trade.svg";
 import returnPolicy from "../assets/return.svg";
 import support from "../assets/support.svg";
 
-const ComponentsContentPage = () => {
+const GamesContentPage = () => {
   const { id } = useParams();
   const [game, setGame] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -21,7 +21,7 @@ const ComponentsContentPage = () => {
     const fetchGameDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${BASE_URL}/api/pccontent/${id}`);
+        const response = await fetch(`${BASE_URL}/api/gamescontent/${id}`);
         if (!response.ok) throw new Error("Failed to fetch game details");
         const data = await response.json();
         setGame(data);
@@ -35,7 +35,8 @@ const ComponentsContentPage = () => {
   }, [id]);
 
   if (loading) return <Loader />;
-  if (!game) return <div className="text-white text-center">Game not found</div>;
+  if (!game)
+    return <div className="text-white text-center">Game not found</div>;
 
   return (
     <div className="px-5 md:px-12 lg:px-52 bg-[#121212] text-white">
@@ -77,8 +78,21 @@ const ComponentsContentPage = () => {
           </div>
 
           {/* Description Sections */}
-          <DescriptionSection title="Description" content={game.description} />
-          <DescriptionSection title="Warranty" content={game.warranty} />
+          <GameDescriptionSection
+            title="Description"
+            about={game.about1}
+            gametype={game.gametype}
+            genre={game.genre}
+            internet={game.internet}
+            playable={game.playeble}
+            platform={game.platform}
+            release={game.release}
+            country={game.country}
+            approxgameplay={game.approxgameplay}
+            rating={game.rating}
+            publisher={game.publisher}
+            developer={game.Developer}
+          />
         </div>
       </div>
 
@@ -88,4 +102,4 @@ const ComponentsContentPage = () => {
   );
 };
 
-export default ComponentsContentPage;
+export default GamesContentPage;

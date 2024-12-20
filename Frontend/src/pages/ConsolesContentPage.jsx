@@ -5,14 +5,14 @@ import Loader from "../components/Loader";
 import ProductImage from "../components/ProductImage";
 import ProductInfo from "../components/ProductInfo";
 import FeaturesCard from "../components/FeaturesCard";
-import DescriptionSection from "../components/DescriptionSection";
+import ConsoleDescriptionSection from "../components/ConsoleDescriptionSection";
 import SimilarProducts from "../components/SimilarProducts";
 import delivery from "../assets/delivery.svg";
 import tradeIn from "../assets/trade.svg";
 import returnPolicy from "../assets/return.svg";
 import support from "../assets/support.svg";
 
-const ComponentsContentPage = () => {
+const ConsolesContentPage = () => {
   const { id } = useParams();
   const [game, setGame] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -21,7 +21,7 @@ const ComponentsContentPage = () => {
     const fetchGameDetails = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`${BASE_URL}/api/pccontent/${id}`);
+        const response = await fetch(`${BASE_URL}/api/consolescontent/${id}`);
         if (!response.ok) throw new Error("Failed to fetch game details");
         const data = await response.json();
         setGame(data);
@@ -35,7 +35,8 @@ const ComponentsContentPage = () => {
   }, [id]);
 
   if (loading) return <Loader />;
-  if (!game) return <div className="text-white text-center">Game not found</div>;
+  if (!game)
+    return <div className="text-white text-center">Game not found</div>;
 
   return (
     <div className="px-5 md:px-12 lg:px-52 bg-[#121212] text-white">
@@ -77,8 +78,21 @@ const ComponentsContentPage = () => {
           </div>
 
           {/* Description Sections */}
-          <DescriptionSection title="Description" content={game.description} />
-          <DescriptionSection title="Warranty" content={game.warranty} />
+          <ConsoleDescriptionSection
+            title="Description"
+            description={game.description}
+            title1="Features"
+            featured1={game.features1}
+            featured2={game.features2}
+            featured3={game.feature3}
+            title2="Included"
+            included1={game.included1}
+            included2={game.included2}
+            included3={game.included3}
+            included4={game.included4}
+            included5={game.included5}
+            included6={game.included6}
+          />
         </div>
       </div>
 
@@ -88,4 +102,4 @@ const ComponentsContentPage = () => {
   );
 };
 
-export default ComponentsContentPage;
+export default ConsolesContentPage;

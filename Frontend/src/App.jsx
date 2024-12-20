@@ -9,6 +9,9 @@ import AccessoriesPage from "./pages/AccessoriesPage";
 import PCComponentsPage from "./pages/PCComponentsPage";
 
 const ComponentsContentPage = lazy(() => import("./pages/ComponentsContentPage"));
+const GamesContentPage = lazy(() => import("./pages/GamesContentPage"));
+const ConsolesContentPage = lazy(() => import("./pages/ConsolesContentPage"));
+const AccessoriesContentPage = lazy(() => import("./pages/AccessoriesContentPage"));
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
               <Route path="/pc-components" element={<PCComponentsPage />} />
               {/* Add the dynamic route for PC content */}
               <Route path="/pccontent/:id" element={<ComponentsContentPage />} />
+              <Route path="/gamescontent/:id" element={<GamesContentPage />} />
+              <Route path="/consolescontent/:id" element={<ConsolesContentPage />} />
+              <Route path="/accessoriescontent/:id" element={<AccessoriesContentPage />} />
             </Routes>
           </Suspense>
         </main>

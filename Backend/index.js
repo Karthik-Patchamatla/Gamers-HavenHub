@@ -137,3 +137,42 @@ app.get('/api/pccontent/:id', async (req, res) => {
       res.status(500).json({ error: "An error occurred while fetching the game details" });
   }
 });
+
+app.get('/api/gamescontent/:id', async (req, res) => {
+  try {
+      const { id } = req.params;
+      const game = await Game.findById(id);
+      if (!game) {
+          return res.status(404).json({ error: "Game not found" });
+      }
+      res.status(200).json(game);
+  } catch (error) {
+      res.status(500).json({ error: "An error occurred while fetching the game details" });
+  }
+});
+
+app.get('/api/consolescontent/:id', async (req, res) => {
+  try {
+      const { id } = req.params;
+      const game = await Console.findById(id);
+      if (!game) {
+          return res.status(404).json({ error: "Game not found" });
+      }
+      res.status(200).json(game);
+  } catch (error) {
+      res.status(500).json({ error: "An error occurred while fetching the game details" });
+  }
+});
+
+app.get('/api/accessoriescontent/:id', async (req, res) => {
+  try {
+      const { id } = req.params;
+      const game = await Accessories.findById(id);
+      if (!game) {
+          return res.status(404).json({ error: "Game not found" });
+      }
+      res.status(200).json(game);
+  } catch (error) {
+      res.status(500).json({ error: "An error occurred while fetching the game details" });
+  }
+});
